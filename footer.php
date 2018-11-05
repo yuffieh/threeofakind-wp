@@ -12,7 +12,6 @@
 
 <div class="page-footer">
 
-    testing
 
 </div>
 	 

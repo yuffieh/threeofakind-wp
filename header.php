@@ -41,29 +41,14 @@
 <!-- nav start -->
 
 <div class="nav-container">
-    <a href="/" class="header-brand"><img src="<?php header_image(); ?>" class="brand-icon"></a>
-
     <div class="header-nav">
         <ul class="main-links">
             <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
         </ul>
     </div><!--/.header-nav-->
-
-    <ul class="social-links" style="float: right;">
-        <li>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="CRTQHZHBSVCXS">
-                <input class="submit-btn" type="submit" value="Donate" border="0" name="submit" alt="Donate">
-            </form>
-        </li>
-    </ul>
-    <a href="#" class="header-mobile-navicon js-mobile-navicon"></a>
 </div><!--/.nav-container-->
 <!-- nav end -->
 
-<div class="spacer">
-</div>
 
 </body>
 </html>

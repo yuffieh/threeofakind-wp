@@ -25,17 +25,13 @@ if (is_front_page()) {
     <?php query_posts($args); ?>
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-            <div class="member-row">
-                <span class="member-image">
-                    <img src="<?php the_post_thumbnail_url('full'); ?>"/>
-                </span>
-                <span class="member-bio">
+            <div class="section-one">
+                <img class="main-img" src="<?php the_post_thumbnail_url('full'); ?>"/>
+                <div class="main-info">
                     <h2 class="member-name"><?php the_title(); ?></h2>
-                    <hr>
                     <br/>
                     <?php the_content(); ?>
-                </span>
-
+                </div>
             </div>
         <?php endwhile; ?>
     <?php endif; ?>

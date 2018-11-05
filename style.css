@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,800i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 /*
 Theme Name: Three Of A Kind
@@ -29,7 +29,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* global styles*/
 body {
     background-color: #fff;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
 }
 
 * {
@@ -41,8 +42,9 @@ hr.hr-light {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Playfair Display', serif;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button:focus {outline:0;}
@@ -76,6 +78,10 @@ button:focus {outline:0;}
 
 .container-fluid {
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 /* navbar ---------------------------------------------------------------------------------------------------- */
@@ -86,9 +92,8 @@ button:focus {outline:0;}
     top: 0;
     width: 100%;
     z-index: 10000;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
     transition: .5s;
-
+    padding: 1em;
 }
 
 .nav-container.scrolled {
@@ -103,6 +108,7 @@ button:focus {outline:0;}
 .header-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -138,8 +144,6 @@ button:focus {outline:0;}
 
 }
 
-
-
 .header-nav ul li a {
     color: #888;
     text-transform: uppercase;
@@ -155,78 +159,16 @@ button:focus {outline:0;}
 
 .header-nav ul li a:hover {
     cursor: pointer;
-    color: #fff;
     transition: .5s;
 }
 
 .header-nav ul.main-links li:hover {
-    text-decoration: none;
-    color: #fff;
+    text-decoration: underline;
     cursor: pointer;
-    background-color: #602A74;
     transition: .5s;
 }
 
-ul.social-links {
-    margin-right: 50px;
-    font-family: 'Raleway', sans-serif;
-}
 
-ul.social-links li {
-    background-color: #602A74;
-    letter-spacing: .5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.submit-btn {
-    border: none;
-    background-color: #B15E6C;
-    letter-spacing: 2px;
-    color: #fff;
-    width: 150px;
-    padding: 1em;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-}
-
-.submit-btn:hover {
-    font-weight: bolder;
-    background-color: #F7DBA7;
-    transition: .5s;
-    cursor: pointer;
-}
-
-ul.social-links {
-    display: flex;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-}
-
-/* Member Page ---------------------------------------------------------------------------------------------------- */
-
-.member-row {
-    display:flex;
-    flex-direction: row;
-    margin-bottom: 1em;
-    padding-top: 1em;
-}
-
-.member-image img {
-    width: 200px;
-}
-
-
-.member-bio {
-    padding-right: 5em;
-    padding-left: 5em;
-}
-
-.member-bio > p {
-    padding-bottom: 1em;
-
-}
 
 
 /* animations ---------------------------------------------------------------------------------------------- */
@@ -254,21 +196,57 @@ ul.social-links {
     display: flex;
     align-content: center;
     align-items: center;
+    align-self: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url("./imgs/testagain.png");
     background-size: cover;
-    width: 100%;
-    height:100vh;
+    background-position: center center;
+    margin-top:2em;
+    width: 95%;
+    height:90vh;
 }
 
 .section-one img {
-    width: 80%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.main-info {
+    text-align: center;
+    color: white;
+    z-index: 1000;
+    border: 1px solid white;
+    padding: 2em;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    width: 700px;
+    height: 400px;
+}
+
+.about-me span {
+    width: 100%;
+}
+
+.about-me span p {
+    padding: 1em;
+}
+
+.about-me img {
+    width: 300px;
+    height:400px;
 }
 
 .section {
     width: 100%;
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .overlay-absolute {
@@ -301,7 +279,5 @@ h1.page-title {
 
 /* footer ---------------------------------------------------------------------------------------------------- */
 .page-footer {
-    background-color: #009B93;
-    height: 300px;
     width: 100%;
 }
