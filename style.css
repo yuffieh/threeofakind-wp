@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,800i');
+
+/*
+Theme Name: Three Of A Kind
+Theme URI: https://wordpress.org/themes/threeofakind/
+Author: yuffieh
+Author URI: https://yuffieh.com/
+Description: Custom Theme for Three of a Kind
+Version: 1.4
+License: GNU General Public License v1 or later
+License URI: 
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Text Domain: Three of a Kind
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* global styles*/
+body {
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+hr.hr-light {
+    border-top: 1px solid #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+button:focus {outline:0;}
+
+.stroked-btn {
+    border: 2px solid white;
+    background-color: transparent;
+    letter-spacing: 2px;
+    color: #fff;
+    width: 150px;
+    padding: 1em;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.stroked-btn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: #009B93;
+    font-weight: bolder;
+    transition: .5s;
+}
+
+#post-6 {
+    display: none;
+}
+
+.entry-title {
+    display: none;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* navbar ---------------------------------------------------------------------------------------------------- */
+.nav-container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    transition: .5s;
+
+}
+
+.nav-container.scrolled {
+    height: 50px;
+    transition: .5s;
+}
+
+.spacer {
+    height: 80px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-icon {
+    width: 250px;
+    float: left;
+    margin: 10px;
+}
+
+.brand-icon.scrolled {
+    width: 50px;
+    margin: 0 20px 0 20px;
+    transition: .01s;
+}
+
+.header-nav ul li {
+    display: inline-block;
+    float: left;
+    font-weight: 400;
+    letter-spacing: 2px;
+    height: 40px;
+    vertical-align: middle;
+    color: #888;
+    text-transform: uppercase;
+}
+
+
+.header-nav ul.main-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+
+}
+
+
+
+.header-nav ul li a {
+    color: #888;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+}
+
+.header-nav ul li a:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+}
+
+.header-nav ul.main-links li:hover {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #602A74;
+    transition: .5s;
+}
+
+ul.social-links {
+    margin-right: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul.social-links li {
+    background-color: #602A74;
+    letter-spacing: .5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    border: none;
+    background-color: #B15E6C;
+    letter-spacing: 2px;
+    color: #fff;
+    width: 150px;
+    padding: 1em;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.submit-btn:hover {
+    font-weight: bolder;
+    background-color: #F7DBA7;
+    transition: .5s;
+    cursor: pointer;
+}
+
+ul.social-links {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Member Page ---------------------------------------------------------------------------------------------------- */
+
+.member-row {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+.member-image img {
+    width: 200px;
+}
+
+
+.member-bio {
+    padding-right: 5em;
+    padding-left: 5em;
+}
+
+.member-bio > p {
+    padding-bottom: 1em;
+
+}
+
+
+/* animations ---------------------------------------------------------------------------------------------- */
+
+
+.test {
+    opacity: 0;
+    /*display: none;*/
+}
+
+/* sections ---------------------------------------------------------------------------------------------- */
+
+#intro-overlay {
+    width: 100%;
+    padding: 2em;
+    color: white;
+    line-height: 1.08;
+    overflow: hidden;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.section-one {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./imgs/testagain.png");
+    background-size: cover;
+    width: 100%;
+    height:100vh;
+}
+
+.section-one img {
+    width: 80%;
+}
+
+.section {
+    width: 100%;
+    padding: 2em;
+}
+
+.overlay-absolute {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
+
+.img-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.img-header img {
+    width: inherit;
+}
+
+
+/* page-template ---------------------------------------------------------------------------------------------- */
+h1.page-title {
+    text-align: center;
+    letter-spacing: 5px;
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+
+
+/* footer ---------------------------------------------------------------------------------------------------- */
+.page-footer {
+    background-color: #009B93;
+    height: 300px;
+    width: 100%;
+}
