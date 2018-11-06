@@ -16,7 +16,7 @@ get_header(); ?>
     $args = array(
         'type' => 'post',
         'posts_per_page' => -1,
-        'cat' => '2',
+        'cat' => '3',
         'order_by' => 'date');
     ?>
     <?php query_posts($args); ?>

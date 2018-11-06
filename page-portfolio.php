@@ -20,7 +20,7 @@ if (is_front_page()) {
     $args = array(
         'type' => 'post',
         'posts_per_page' => 9,
-        'cat' => '5',
+        'cat' => '2',
         'order_by' => 'date');
     ?>
     <?php query_posts($args); ?>
