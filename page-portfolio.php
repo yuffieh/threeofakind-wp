@@ -8,7 +8,7 @@ get_header(); ?>
 <?php
 
 if (is_front_page()) {
-    get_template_part('template-parts/content', 'page-members');
+    get_template_part('template-parts/content', 'page-portfolio');
 } ?>
 
 

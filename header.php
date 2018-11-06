@@ -41,6 +41,7 @@
 <!-- nav start -->
 
 <div class="nav-container">
+    <img class="nav-img" src="<?php echo( get_header_image() ); ?>">
     <div class="header-nav">
         <ul class="main-links">
             <?php wp_nav_menu(array('theme_location' => 'primary')); ?>

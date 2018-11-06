@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Arapey:400,400i');
 
 /*
 Theme Name: Three Of A Kind
@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* global styles*/
 body {
     background-color: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Arapey', serif;
     letter-spacing: 1px;
 }
 
@@ -42,12 +42,14 @@ hr.hr-light {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Arapey', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-button:focus {outline:0;}
+button:focus {
+    outline: 0;
+}
 
 .stroked-btn {
     border: 2px solid white;
@@ -89,11 +91,12 @@ button:focus {outline:0;}
     display: flex;
     flex-direction: row;
     background-color: #fff;
-    top: 0;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    z-index: 10000;
     transition: .5s;
-    padding: 1em;
+    height: 0px;
+    overflow: hidden;
 }
 
 .nav-container.scrolled {
@@ -107,9 +110,8 @@ button:focus {outline:0;}
 
 .header-nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    margin-left: 6em;
 }
 
 .brand-icon {
@@ -130,11 +132,11 @@ button:focus {outline:0;}
     font-weight: 400;
     letter-spacing: 2px;
     height: 40px;
+    font-size: 1em;
     vertical-align: middle;
     color: #888;
     text-transform: uppercase;
 }
-
 
 .header-nav ul.main-links li {
     display: flex;
@@ -145,39 +147,66 @@ button:focus {outline:0;}
 }
 
 .header-nav ul li a {
-    color: #888;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
+    float: left;
+    color: #888;
+    text-transform: uppercase;
     text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 2px;
     margin: 10px;
     height: 40px;
-    width: 100px;
+    width: 150px;
     padding: 5px;
 }
 
 .header-nav ul li a:hover {
+    color: #C099DB;
     cursor: pointer;
     transition: .5s;
 }
 
 .header-nav ul.main-links li:hover {
-    text-decoration: underline;
     cursor: pointer;
     transition: .5s;
 }
 
+.nav-img {
+    top:100%;
+    opacity:0;
+    width: 15%;
+    margin-left: 6em;
+    animation:fadeIn 2s forwards;
+    -webkit-animation:fadeIn 2s forwards;
+}
 
-
+.nav-img:hover {
+    opacity: .5;
+    transition: .5s;
+}
 
 /* animations ---------------------------------------------------------------------------------------------- */
 
 
-.test {
-    opacity: 0;
-    /*display: none;*/
-}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}@-webkit-keyframes fadeIn{
+     from{
+         opacity:0;
+     }
+     to{
+         opacity: 1;
+     }
+
+ }
 
 /* sections ---------------------------------------------------------------------------------------------- */
 
@@ -201,9 +230,12 @@ button:focus {outline:0;}
     justify-content: center;
     background-size: cover;
     background-position: center center;
-    margin-top:2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     width: 95%;
-    height:90vh;
+    height: 90vh;
+    opactiy: .1;
+    transition: .5s;
 }
 
 .section-one img {
@@ -218,27 +250,38 @@ button:focus {outline:0;}
     z-index: 1000;
     border: 1px solid white;
     padding: 2em;
+    transition: .5s;
+}
+
+.border-style {
+    border: 1px solid white;
+    padding: 1em;
+    transition: .5s;
 }
 
 .about-me {
     display: flex;
     flex-direction: row;
-    font-size: 12px;
+    font-size: 13px;
     width: 700px;
     height: 400px;
 }
 
-.about-me span {
+.about-me-content {
     width: 100%;
+    opacity: .1;
 }
 
 .about-me span p {
     padding: 1em;
 }
 
-.about-me img {
+
+.about-img {
+    opacity: 0;
     width: 300px;
-    height:400px;
+    height: 400px;
+    float:right;
 }
 
 .section {
@@ -247,6 +290,7 @@ button:focus {outline:0;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1em;
 }
 
 .overlay-absolute {
@@ -266,7 +310,6 @@ button:focus {outline:0;}
     width: inherit;
 }
 
-
 /* page-template ---------------------------------------------------------------------------------------------- */
 h1.page-title {
     text-align: center;
@@ -274,8 +317,6 @@ h1.page-title {
     padding-top: .5em;
     padding-bottom: 1em;
 }
-
-
 
 /* footer ---------------------------------------------------------------------------------------------------- */
 .page-footer {
