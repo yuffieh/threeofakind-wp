@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Members
+Template Name: Portfolio
 */
 get_header(); ?>
 
