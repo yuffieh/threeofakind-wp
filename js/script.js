@@ -9,7 +9,7 @@
          */
 
         $(window).load(() => {
-            $('.nav-container').delay(100).animate({'height': '150px', 'padding': '1em'}, 100);
+            $('.nav-container').delay(100).animate({'opacity': '1'}, 600);
         })
 
         $(document).scroll(() => {
