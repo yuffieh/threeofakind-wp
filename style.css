@@ -86,6 +86,14 @@ button:focus {
     flex-direction: column;
 }
 
+.center-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
 /* navbar ---------------------------------------------------------------------------------------------------- */
 .nav-container {
     display: flex;
@@ -310,10 +318,33 @@ button:focus {
     width: inherit;
 }
 
+.portfolio-container {
+    display: flex;
+    flex-flow: wrap;
+    width: 80%;
+    flex-direction: row;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.portfolio-img {
+    margin: 1em;
+    background-position: center center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    opacity: 0;
+    animation:fadeIn 2s forwards;
+    -webkit-animation:fadeIn 2s forwards;
+}
+
 /* page-template ---------------------------------------------------------------------------------------------- */
 h1.page-title {
+    font-style: italic;
     text-align: center;
     letter-spacing: 5px;
+    text-transform: lowercase;
     padding-top: .5em;
     padding-bottom: 1em;
 }
