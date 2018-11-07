@@ -292,6 +292,24 @@ function set_js_var() {
 }
 add_action('wp_enqueue_scripts','set_js_var');
 
+/****
+ * @local
+ * about = 4
+ * portfolio = 5
+ * main = 2
+ *
+ * @prod
+ * about = 4
+ * portfolio = 2
+ * main = 3
+ */
+
+$about = 4;
+$portfolio = 2;
+$main = 3;
+
+
+
 /**
  * Adds custom classes to the array of body classes.
  *

@@ -2,22 +2,22 @@
 /*
 Template Name: Homepage
 */
+global $about, $main;
 get_header(); ?>
-
 
 <?php get_template_part('template-parts/content', 'page-homepage'); ?>
 
 
 <div class="container-fluid">
 
-<!-- main section-->
+    <!-- main section-->
     <?php
-    $count = 0;
-    $args = array(
-        'type' => 'post',
-        'posts_per_page' => -1,
-        'cat' => '3',
-        'order_by' => 'date');
+        $count = 0;
+        $args = array(
+            'type' => 'post',
+            'posts_per_page' => -1,
+            'cat' => $main,
+            'order_by' => 'date');
     ?>
     <?php query_posts($args); ?>
     <?php if (have_posts()) : ?>
@@ -26,6 +26,7 @@ get_header(); ?>
             <div class="section-one" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
                 <div class="border-style">
                     <div class="main-info">
+
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
                     </div>
@@ -37,14 +38,14 @@ get_header(); ?>
     <?php endif; ?>
 
 
-<!--about me-->
+    <!--about me-->
 
     <?php
     $count = 0;
     $args = array(
         'type' => 'post',
         'posts_per_page' => -1,
-        'cat' => '4',
+        'cat' => $about,
         'order_by' => 'date');
     ?>
     <?php query_posts($args); ?>
@@ -58,7 +59,7 @@ get_header(); ?>
                         <span class="about-me-content">
                             <?php the_content(); ?>
                         </span>
-                    <img class="about-img" src="<?php the_post_thumbnail_url('full'); ?>" />
+                    <img class="about-img" src="<?php the_post_thumbnail_url('full'); ?>"/>
 
                 </div>
 

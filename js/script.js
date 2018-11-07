@@ -13,9 +13,9 @@
         })
 
         $(document).scroll(() => {
-            $('.about-img').delay(100).animate({'opacity': '1'}, 600);
-            $('.about-img').delay(100).animate({'opacity': '1'}, 600);
-            $('.about-me-content').delay(100).animate({'opacity': '1'}, 600);
+            $('.about-img').delay(100).animate({'opacity': '1'}, 800);
+            $('.about-img').delay(100).animate({'opacity': '1'}, 800);
+            $('.about-me-content').delay(100).animate({'opacity': '1'}, 800);
         });
 
     });
